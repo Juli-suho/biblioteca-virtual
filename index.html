@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biblioteca virtual escolar: explora, consulta y descarga materiales educativos.">
+  <meta name="theme-color" content="#193D36">
+
+  <title>El Rincón del Saber | Biblioteca Virtual</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a class="logo-biblioteca" href="#inicio" aria-label="Ir al inicio">
+      <span class="logo-icono">▤</span>
+      <span>
+        <strong>El Rincón del Saber</strong>
+        <small>Biblioteca virtual escolar</small>
+      </span>
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#acerca">Acerca de</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="bienvenida" id="inicio">
+      <div class="contenido-bienvenida">
+
+        <p class="subtitulo-bienvenida">BIBLIOTECA ESCOLAR</p>
+
+        <h1>Un mundo de conocimiento a tu alcance</h1>
+
+        <p>
+          Explora nuestra colección de libros y materiales educativos.
+          Aprende, consulta y descubre nuevos conocimientos.
+        </p>
+
+        <a href="#catalogo" class="boton-explorar">
+          Explorar catálogo <span aria-hidden="true">→</span>
+        </a>
+
+      </div>
+
+      <div class="" aria-hidden="true">
+        <div class="">
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="seccion-catalogo">
+
+      <div class="encabezado-seccion">
+        <div>
+          <p class="etiqueta-seccion">NUESTRA COLECCIÓN</p>
+          <h2>Catálogo de libros</h2>
+          <p class="texto-suave">
+            Encuentra recursos para aprender a tu propio ritmo.
+          </p>
+        </div>
+
+        <span class=""><br></span>
+      </div>
+
+      <label class="etiqueta-busqueda" for="buscador">
+        Buscar por título, autor o categoría
+      </label>
+
+      <input
+        type="search"
+        id="buscador"
+        placeholder="Ej. Álgebra, Matemáticas..."
+        autocomplete="off"
+      >
+
+      <div
+        id="menu-categorias"
+        class="menu-categorias"
+        aria-label="Filtrar por categoría">
+      </div>
+
+      <div class="barra-resultados">
+        <p id="mensaje-resultados" aria-live="polite">
+          Cargando catálogo…
+        </p>
+      </div>
+
+      <div
+        class="contenedor-libros"
+        id="contenedor-libros"
+        aria-live="polite">
+      </div>
+
+    </section>
+
+    <section id="lector-libro" class="lector-libro" hidden>
+
+      <div class="lector-cabecera">
+        <div>
+          <p class="etiqueta-seccion">SALA DE LECTURA</p>
+          <h2 id="titulo-lector">Lectura del libro</h2>
+        </div>
+
+        <button type="button" id="cerrar-lector" class="boton-secundario">
+          ← Volver al catálogo
+        </button>
+      </div>
+
+      <p id="aviso-lector" class="aviso-lector">
+        Si el documento no se muestra, utiliza el botón de descarga de su tarjeta.
+      </p>
+
+      <iframe
+        id="visor-pdf"
+        title="Lector de documentos"
+        loading="lazy">
+      </iframe>
+
+    </section>
+
+    <section class="acerca" id="acerca">
+
+      <div class="contenido-acerca">
+
+        <p class="etiqueta-seccion">NUESTRA ESENCIA</p>
+
+        <h2>Acerca de nuestra biblioteca 📚</h2> <span></span>
+
+        <p>
+          Nuestra biblioteca virtual es un espacio educativo creado para
+          facilitar el acceso al conocimiento y promover el hábito de la
+          lectura entre nuestra comunidad escolar.
+        </p>
+
+        <p>
+          Aquí podrás encontrar libros y materiales de consulta de
+          diferentes áreas del conocimiento, disponibles para su lectura y descarga.
+        </p>
+
+        <h3>Nuestro propósito</h3>
+
+        <p>
+          Fomentar el aprendizaje autónomo, la investigación y el intercambio
+          de conocimientos mediante el uso de recursos digitales.
+        </p>
+
+      </div>
+
+      <div class="acerca-dato">
+        <span></span>
+        <strong></strong>
+        <small></small>
+
+        <span></span>
+        <strong></strong>
+        <small></small>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <span>▤ El Rincón del Saber</span>
+    <span>Biblioteca Virtual Escolar · 2026</span>
+  </footer>
+
+  <script src="js/catalogo.js" defer></script>
+
+</body>
+</html>

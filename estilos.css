@@ -1,0 +1,686 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+
+:root {
+    --verde: #0d53eb;
+    --verde2: #1153e0;
+    --verde3: #0f26f0;
+    --crema: #eaf0f4;
+    --dorado: #E5D6AC;
+    --texto: #0d9be2;
+    --suave: #66736D;
+    --borde: #E2E8E3;
+    --blanco: #f7f3f3d7;
+    --sombra: 0 8px 28px rgba(25,61,54,.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 92px;
+}
+
+body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--texto);
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 15px max(5vw,22px);
+    background: rgba(25,61,54,.97);
+    color: #fff;
+    box-shadow: 0 4px 18px #102a241f;
+    backdrop-filter: blur(10px);
+}
+
+.logo-biblioteca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icono {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #ffffff55;
+    border-radius: 12px;
+    color: var(--dorado);
+    font-size: 27px;
+}
+
+.logo-biblioteca strong {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-biblioteca small {
+    display: block;
+    color: #d7e2dc;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.navegacion {
+    display: flex;
+    gap: 28px;
+}
+
+.navegacion a {
+    color: #f6f7f4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navegacion a:hover {
+    color: var(--dorado);
+}
+
+
+
+main {
+    width: min(1160px,90%);
+    margin: 34px auto 60px;
+}
+
+
+
+.bienvenida {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 350px;
+    overflow: hidden;
+    padding: 58px clamp(25px,6vw,70px);
+    border-radius: 20px;
+    background: linear-gradient(120deg,#193D36,#326B59);
+    color: #fff;
+    box-shadow: var(--sombra);
+}
+
+.contenido-bienvenida {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.subtitulo-bienvenida,
+.etiqueta-seccion {
+    margin: 0 0 12px;
+    color: #d9c99b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.bienvenida h1 {
+    max-width: 610px;
+    margin: 0 0 16px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px,4.4vw,52px);
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+.bienvenida p:not(.subtitulo-bienvenida) {
+    max-width: 560px;
+    color: #e4ece7;
+    font-size: 16px;
+}
+
+.boton-explorar {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--dorado);
+    color: var(--verde);
+    font-weight: 700;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.boton-explorar:hover {
+    background: #f2e8ce;
+    transform: translateY(-2px);
+}
+
+
+.hero-decoracion {
+    display: grid;
+    place-items: center;
+    width: 230px;
+    height: 230px;
+    margin: 0 3% 0 25px;
+    border: 1px solid #ffffff38;
+    border-radius: 50%;
+    background: #ffffff0b;
+    flex-shrink: 0;
+}
+
+.libro-hero {
+    display: grid;
+    place-items: center;
+    width: 145px;
+    height: 180px;
+    border-radius: 5px 14px 14px 5px;
+    background: linear-gradient(145deg,#e8d8ad,#c6b27e);
+    box-shadow: 14px 16px 0 #102d2766;
+    color: #31594b;
+    font-family: Georgia, serif;
+    font-size: 66px;
+    transform: rotate(7deg);
+}
+
+.libro-hero span {
+    font: 700 9px 'Poppins', sans-serif;
+    letter-spacing: 1.4px;
+}
+
+
+
+.seccion-catalogo {
+    margin-top: 38px;
+    padding: 34px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.encabezado-seccion .etiqueta-seccion,
+.acerca .etiqueta-seccion,
+.lector-cabecera .etiqueta-seccion {
+    color: var(--verde2);
+}
+
+h2 {
+    margin: 0;
+    color: var(--verde);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.texto-suave {
+    margin: 8px 0 0;
+    color: var(--suave);
+    font-size: 14px;
+}
+
+.sello-catalogo {
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #d6c89f;
+    border-radius: 50%;
+    color: #8a7748;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: rotate(10deg);
+}
+
+
+
+.etiqueta-busqueda {
+    display: block;
+    margin-bottom: 8px;
+    color: #344740;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#buscador {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    padding: 13px 15px;
+    border: 1px solid #cbd7d0;
+    border-radius: 9px;
+    background: #fbfcfa;
+    color: var(--texto);
+    font: inherit;
+    outline: none;
+}
+
+#buscador:focus {
+    border-color: var(--verde2);
+    box-shadow: 0 0 0 3px #326b591c;
+}
+
+
+.menu-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 18px 0 12px;
+}
+
+.boton-categoria {
+    padding: 8px 15px;
+    border: 1px solid #b8cfc3;
+    border-radius: 30px;
+    background: #fff;
+    color: var(--verde2);
+    cursor: pointer;
+    font: 600 13px 'Poppins', sans-serif;
+    transition: .18s;
+}
+
+.boton-categoria:hover,
+.boton-categoria.activa {
+    border-color: var(--verde3);
+    background: var(--verde3);
+    color: #fff;
+}
+
+
+
+.barra-resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 28px;
+}
+
+.barra-resultados p {
+    color: var(--suave);
+    font-size: 12px;
+}
+
+
+
+.contenedor-libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
+    gap: 22px;
+    margin-top: 12px;
+}
+
+.tarjeta-libro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #e8ece8;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 3px 12px #0000000a;
+    transition: transform .2s,box-shadow .2s;
+}
+
+.tarjeta-libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px #193d361a;
+}
+
+.imagen-portada {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 7px;
+    background: #f4f1ea;
+}
+
+.informacion-libro h3 {
+    margin: 0 0 7px;
+    color: var(--verde);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.informacion-libro p {
+    margin: 4px 0;
+    color: #5d6963;
+    font-size: 12px;
+}
+
+.informacion-libro .descripcion-libro {
+    margin-top: 10px;
+    color: #68746e;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.grupo-archivo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-top: auto;
+}
+
+.boton-libro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 39px;
+    padding: 8px 6px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--verde3);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font: 600 11px 'Poppins', sans-serif;
+    transition: background .2s;
+}
+
+.boton-libro:hover {
+    background: var(--verde);
+}
+
+.sin-resultados {
+    grid-column: 1/-1;
+    padding: 30px;
+    border: 1px dashed #cbd7d0;
+    border-radius: 12px;
+    color: var(--suave);
+    text-align: center;
+}
+
+
+.lector-libro {
+    margin-top: 28px;
+    padding: 26px;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+
+.lector-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.lector-cabecera h2 {
+    font-size: 24px;
+}
+
+.boton-secundario {
+    padding: 10px 15px;
+    border: 1px solid #c7d4cc;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--verde);
+    cursor: pointer;
+    font: 600 13px 'Poppins', sans-serif;
+}
+
+.boton-secundario:hover {
+    background: #edf3ef;
+}
+
+.aviso-lector {
+    color: var(--suave);
+    font-size: 12px;
+}
+
+#visor-pdf {
+    display: block;
+    width: 100%;
+    height: min(75vh,780px);
+    min-height: 480px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: #f7f8f6;
+}
+
+
+
+.acerca {
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 45px;
+    align-items: center;
+    margin-top: 36px;
+    padding: 42px;
+    background: #eaf0ec;
+    border-radius: 16px;
+}
+
+.contenido-acerca {
+    max-width: 760px;
+}
+
+.acerca h2 {
+    margin-bottom: 18px;
+}
+
+.acerca h3 {
+    margin: 22px 0 6px;
+    color: var(--verde2);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+}
+
+.acerca p:not(.etiqueta-seccion) {
+    color: #56635c;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.acerca-dato {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 2px 12px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #cbd9d0;
+    border-radius: 13px;
+    background: #ffffff80;
+}
+
+.acerca-dato span {
+    grid-row: span 2;
+    color: #9b895c;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.acerca-dato strong {
+    color: var(--verde);
+    font-size: 14px;
+}
+
+.acerca-dato small {
+    color: var(--suave);
+    font-size: 11px;
+}
+
+
+
+.pie {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 5%;
+    background: var(--verde);
+    color: #dfe9e3;
+    font-size: 12px;
+}
+
+.pie span:first-child {
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+
+@media(max-width:768px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 13px;
+        padding: 14px 20px;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .bienvenida {
+        min-height: 0;
+        padding: 42px 28px;
+    }
+
+    .hero-decoracion {
+        width: 155px;
+        height: 155px;
+        margin-left: 10px;
+    }
+
+    .libro-hero {
+        width: 95px;
+        height: 125px;
+        font-size: 48px;
+    }
+
+    .seccion-catalogo {
+        padding: 25px;
+    }
+
+    .contenedor-libros {
+        grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+        gap: 15px;
+    }
+
+    .acerca {
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+
+    .acerca-dato {
+        max-width: 260px;
+    }
+
+    .lector-cabecera {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+
+@media(max-width:480px) {
+
+    main {
+        width: 92%;
+        margin-top: 18px;
+    }
+
+    .logo-biblioteca strong {
+        font-size: 16px;
+    }
+
+    .navegacion {
+        gap: 16px;
+    }
+
+    .navegacion a {
+        font-size: 13px;
+    }
+
+    .bienvenida {
+        padding: 35px 23px;
+    }
+
+    .bienvenida h1 {
+        font-size: 31px;
+    }
+
+    .hero-decoracion {
+        display: none;
+    }
+
+    .seccion-catalogo {
+        padding: 20px 15px;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 25px;
+    }
+
+    .sello-catalogo {
+        width: 58px;
+        height: 58px;
+        font-size: 8px;
+    }
+
+    .contenedor-libros {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-libro {
+        width: 100%;
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .grupo-archivo .boton-libro {
+        font-size: 10px;
+    }
+
+    .pie {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #visor-pdf {
+        min-height: 380px;
+        height: 65vh;
+    }
+}
